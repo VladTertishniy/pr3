@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE datasources [
+<!ELEMENT datasources (datasource)>
+<!ELEMENT datasource (source-name, connection-url, driver-class, user-name, password)>
+<!ELEMENT source-name ( #PCDATA )>
+<!ELEMENT connection-url ( #PCDATA )>
+<!ELEMENT driver-class ( #PCDATA )>
+<!ELEMENT password ( #PCDATA )>
+<!ELEMENT user-name ( #PCDATA )> 
+]>
+<datasources>
+	<datasource>
+		<source-name>pr3Data</source-name>
+		<connection-url>jdbc:oracle:thin:@localhost:1521:orcl</connection-url>
+		<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+		<user-name>system</user-name>
+		<password>345444mk</password>
+	</datasource>
+</datasources>
