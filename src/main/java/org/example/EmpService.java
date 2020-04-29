@@ -85,7 +85,7 @@ public class EmpService {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("delete from emp where emp.empno = ?");
             preparedStatement.setInt(1, id);
-            preparedStatement.executeQuery();
+            preparedStatement.execute();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,7 +95,6 @@ public class EmpService {
 
     public boolean addEmployee() {
         Scanner scanner = new Scanner(System.in);
-        /*scanner.useDelimiter("\\r\\n");*/
         System.out.println("Enter name:");
         String name = scanner.nextLine();
         System.out.println("Enter id:");
@@ -133,7 +132,7 @@ public class EmpService {
                 preparedStatement.setFloat(7,comm);
             }
             preparedStatement.setInt(8,depno);
-            preparedStatement.executeQuery();
+            preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

@@ -9,10 +9,10 @@ import java.sql.SQLException;
 import java.util.Map;
 
 public class Dao implements AutoCloseable {
-    private String url;
-    private String driver;
-    private String username;
-    private String password;
+    private final String url;
+    private final String driver;
+    private final String username;
+    private final String password;
     private Connection connection;
 
     public Connection getConnection() {
